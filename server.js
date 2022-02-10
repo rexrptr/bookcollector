@@ -1,8 +1,8 @@
-require("dotenv").config();
+// require("dotenv").config();
 
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").toString;
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require("dotenv").toString;
+// }
 
 const express = require("express");
 const app = express();
