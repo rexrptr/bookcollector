@@ -1,0 +1,77 @@
+.form-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.form-item:first-child {
+  margin-left: 0;
+}
+
+.form-item-nogrow {
+  flex-grow: 1;
+  height: 40%;
+}
+
+.form-row-end {
+  justify-content: flex-end;
+}
+
+.form-item > label {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  height: 2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--var-nav);
+  color: var(--var-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+}
+
+.form-item textarea {
+  height: 100%;
+  resize: none;
+}
+
+.form-item select option {
+  background-color: var(--var-nav);
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+  background-color: var(--var-focus);
+}
+
+.filepond--root {
+  font-family: "Josefin Sans";
+  margin-bottom: 0;
+  width: 30%;
+}
+
+.filepond--panel-root {
+  background-color: var(--var-nav);
+  border: none;
+}
+
+.filepond--drop-label {
+  color: var(--var-primary);
+  font-size: inherit;
+}

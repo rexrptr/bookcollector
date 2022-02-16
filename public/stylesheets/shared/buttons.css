@@ -1,0 +1,51 @@
+:root {
+  --color-btnprimary-text: #ffffff;
+  --color-btnprimary-bg: #1e9970;
+  --color-btnprimray-hover: #477062;
+  --color-btndanger-text: #000000;
+  --color-btndanger-bg: #9b3535;
+  --color-btndanger-hover: #c44b4b;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  width: 80px;
+  font-family: "Josefin Sans";
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 250ms ease;
+  text-align: center;
+}
+
+.btn-primary {
+  color: var(--color-btnprimary-text);
+  background-color: var(--color-btnprimary-bg);
+}
+
+.btn-primary:hover {
+  transform: scale(0.93);
+  background-color: var(--color-btnprimray-hover);
+}
+
+.btn-danger {
+  color: var(--color-btndanger-text);
+  background-color: var(--color-btndanger-bg);
+}
+.btn-danger:hover {
+  transform: scale(0.93);
+  background-color: var(--color-btndanger-hover);
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+}
+
+.btn-row > * {
+  margin: 1rem 1rem 1rem 0;
+}

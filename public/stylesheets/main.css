@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;900&family=Josefin+Sans:wght@400;700&display=swap");
+@import "shared/variables.css";
+@import "shared/header.css";
+@import "shared/buttons.css";
+@import "shared/forms.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--var-primary);
+}
+
+body {
+  background: var(--var-bg);
+}
+
+.inner-container {
+  margin: 3rem auto 3rem auto;
+}
+
+.inner-container img {
+  position: relative;
+  background-color: goldenrod;
+  transition: all 200ms ease;
+}
+
+.inner-container img:hover {
+  padding: 0.4rem;
+  opacity: 0.3;
+}
+
+.page-header {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #161615;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #313130;
+  border-radius: 10px;
+}
