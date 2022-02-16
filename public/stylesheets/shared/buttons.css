@@ -5,18 +5,35 @@
   --color-btndanger-text: #000000;
   --color-btndanger-bg: #9b3535;
   --color-btndanger-hover: #c44b4b;
+  --color-editlinks-bg: #9b9b9b;
+}
+
+.editlinks {
+  color: var(--color-btnprimary-text);
+  transition: all 230ms ease;
+  background-color: var(--color-editlinks-bg);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 9px 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.editlinks:hover {
+  color: var(--color-btndanger-text);
 }
 
 .btn {
-  border-radius: 0.5rem;
   border: none;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  width: 80px;
-  font-family: "Josefin Sans";
-  cursor: pointer;
+  font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 12px;
+  width: 80px;
+  height: 30px;
+  font-family: "Josefin Sans";
+  cursor: pointer;
   font-weight: bold;
   transition: all 250ms ease;
   text-align: center;
@@ -28,7 +45,6 @@
 }
 
 .btn-primary:hover {
-  transform: scale(0.93);
   background-color: var(--color-btnprimray-hover);
 }
 
@@ -37,13 +53,16 @@
   background-color: var(--color-btndanger-bg);
 }
 .btn-danger:hover {
-  transform: scale(0.93);
   background-color: var(--color-btndanger-hover);
 }
 
 .btn-row {
   display: flex;
   align-items: center;
+}
+
+.btn-search {
+  margin: 0;
 }
 
 .btn-row > * {

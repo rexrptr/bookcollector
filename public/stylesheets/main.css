@@ -26,19 +26,29 @@ body {
 }
 
 .inner-container img {
-  position: relative;
-  background-color: goldenrod;
-  transition: all 200ms ease;
+  transition: all 250ms ease;
 }
 
 .inner-container img:hover {
-  padding: 0.4rem;
-  opacity: 0.3;
+  padding: 0.5rem;
+  background-color: goldenrod;
+  filter: brightness(0.6);
 }
 
 .page-header {
   text-transform: capitalize;
   font-size: 2rem;
+}
+
+.page-header-books {
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.error-message {
+  color: var(--color-btndanger-bg);
+  margin-bottom: 1rem;
 }
 
 /* width */

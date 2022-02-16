@@ -1,3 +1,30 @@
+:root {
+  --book-cover-width: 200px;
+  --book-cover-width-large: 325px;
+  --book-cover-ar: 0.75;
+}
+
+.book-cover {
+  width: var(--book-cover-width);
+  height: calc(var(--book-cover-width) / var(--book-cover-ar));
+}
+
+.book-cover-large {
+  --book-cover-width: var(--book-cover-width-large);
+}
+
+.book-grid {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+}
+
+.book-grid-large {
+  grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
+
 .form-row {
   display: flex;
   margin-bottom: 0.5rem;
@@ -15,9 +42,27 @@
   margin-left: 0;
 }
 
-.form-item-nogrow {
-  flex-grow: 1;
-  height: 40%;
+.nogrow {
+  flex-grow: 5;
+}
+
+.search-bar {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.search-bar > input {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 400px;
+  padding: 0.2rem 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--var-nav);
+  color: var(--var-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
 }
 
 .form-row-end {
@@ -35,7 +80,6 @@
 .form-item textarea {
   height: 2rem;
   padding: 0.2rem 0.5rem;
-  border-radius: 10px;
   border: none;
   outline: none;
   background-color: var(--var-nav);
@@ -62,8 +106,8 @@
 
 .filepond--root {
   font-family: "Josefin Sans";
-  margin-bottom: 0;
-  width: 30%;
+  overflow: hidden;
+  margin: 0;
 }
 
 .filepond--panel-root {
@@ -73,5 +117,67 @@
 
 .filepond--drop-label {
   color: var(--var-primary);
-  font-size: inherit;
+  font-size: 10px;
+}
+
+.author-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--var-nav);
+  margin: 0.5rem 0;
+}
+
+.author-item p {
+  margin: 0 1rem;
+}
+
+.book-details {
+  display: flex;
+}
+
+.book-details-label {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.books-details-grid {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  margin-left: 2rem;
+}
+
+.book-details-btn-grid {
+  display: grid;
+  /* justify-items: center; */
+  align-items: center;
+  align-content: center;
+  grid-template-areas:
+    "edit delete"
+    "author author";
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.view-author {
+  grid-area: author;
+  justify-self: stretch;
+}
+
+.edit-author {
+  grid-area: edit;
+  justify-self: stretch;
+}
+
+.delete-book {
+  width: -webkit-fill-available;
+}
+
+.book-header {
+  margin-bottom: 1rem;
 }
